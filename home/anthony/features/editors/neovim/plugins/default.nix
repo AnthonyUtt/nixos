@@ -3,7 +3,7 @@ let
   themes = import ./themes { inherit pkgs lib; };
 in{
   # Select a theme from the files available in ./themes
-  theme = themes.gruvbox;
+  theme = themes.gruvbox-baby;
 
   # Dependencies
   plenary = import ./plenary.nix { inherit pkgs lib; };
