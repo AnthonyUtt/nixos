@@ -13,6 +13,7 @@ in
           beyond-20
           bitwarden
           clearurls
+          darkreader
           enhanced-github
           gaoptout
           gruvbox-dark-theme
