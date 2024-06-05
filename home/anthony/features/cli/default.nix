@@ -15,6 +15,7 @@
     fd
     jq
     yarn
+    zellij
     zoxide
   ];
 }

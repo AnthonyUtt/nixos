@@ -2,7 +2,6 @@
   imports = [
     # ../features/editors/nvchad
     ../features/editors/neovim
-    ../features/cli/zellij.nix
     ./modules/eww.nix
     ./modules/hyprland.nix
     ./modules/interface.nix

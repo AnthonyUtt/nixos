@@ -17,3 +17,6 @@ vim.keymap.set('n', '<C-l>', '<C-w>l')
 -- also don't use g[j|k] when in operator pending mode, so it doesn't alter d, y or c behaviour
 vim.keymap.set('n', 'j', 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', { expr = true })
 vim.keymap.set('n', 'k', 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', { expr = true })
+
+vim.keymap.set('v', '<', '<gv', { noremap = true, silent = true })
+vim.keymap.set('v', '>', '>gv', { noremap = true, silent = true })

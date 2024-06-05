@@ -3,7 +3,7 @@ let
   themes = import ./themes { inherit pkgs lib; };
 in{
   # Select a theme from the files available in ./themes
-  theme = themes.gruvbox-baby;
+  theme = themes.pywal;
 
   # Dependencies
   plenary = import ./plenary.nix { inherit pkgs lib; };
@@ -46,6 +46,7 @@ in{
   nvim-autopairs = import ./nvim-autopairs.nix { inherit pkgs lib; };
   nvim-lastplace = import ./nvim-lastplace.nix { inherit pkgs lib; };
   nvim-ts-autotag = import ./nvim-ts-autotag.nix { inherit pkgs lib; };
+  nvim-colorizer = import ./nvim-colorizer.nix { inherit pkgs lib; };
   spelunker = import ./spelunker.nix { inherit pkgs lib; };
   telescope = import ./telescope.nix { inherit pkgs lib; };
   trouble = import ./trouble.nix { inherit pkgs lib; };

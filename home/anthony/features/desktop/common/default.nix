@@ -11,6 +11,7 @@
     ./slack.nix
     ./spotify.nix
     ./vivaldi
+    ./wallust
   ];
 
   xdg.mimeApps.enable = true;

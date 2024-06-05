@@ -4,10 +4,9 @@ let
   inherit (theme) colors;
 in
 ''
-  $inactive_border=0xff${colors.inactive}
-  $active_border=0xff${colors.focused}
-  $group_border=0x66${colors.inactive-alt}
-  $group_border_active=0x66${colors.focused-alt}
+  source=~/.cache/wal/colors-hyprland.conf
+
+  $inactive_color=rgba(59595900)
   $shadow=0x44000000
   $shadow_inactive=0x66000000
 
@@ -19,13 +18,13 @@ in
     cursor_inactive_timeout=4
 
     # Base colors
-    col.inactive_border=$inactive_border
-    col.active_border=$active_border
+    col.inactive_border=$inactive_color
+    col.active_border=$color11 rgba(59595900) $color14 45deg
   }
 
   group {
-    col.border_inactive=$group_border
-    col.border_active=$group_border_active
+    col.border_inactive=$inactive_color
+    col.border_active=$color11 rgba(59595900) $color14 45deg
   }
 
   decoration {
@@ -100,6 +99,8 @@ in
   # Startup
   exec-once=eww -c $HOME/.config/eww open topbar
   exec-once=mako
+  exec-once=wallust run ${wallpaper} --quiet
+  exec-once=pywalfox update
   exec=swaybg -i ${wallpaper} --mode fill
 
   ${hyprland.startup}
