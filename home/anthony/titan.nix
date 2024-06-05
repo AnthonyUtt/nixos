@@ -16,7 +16,7 @@ in
   ];
 
   isWorkstation = true;
-  wallpaper = wallpapers.space-colonization;
+  wallpaper = wallpapers._32x9.fantasy-forest-floor;
   primaryNetworkInterface = "enp7s0";
 
   hyprland = {

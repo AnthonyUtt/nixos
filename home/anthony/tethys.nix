@@ -12,7 +12,7 @@ in
   ];
 
   isWorkstation = true;
-  wallpaper = wallpapers.planet-vector-art;
+  wallpaper = wallpapers._16x10.planet-vector-art;
   primaryNetworkInterface = "wlp0s20f3";
 
   eww.showBattery = true;
