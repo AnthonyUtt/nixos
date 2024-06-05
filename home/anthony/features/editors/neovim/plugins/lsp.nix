@@ -61,6 +61,7 @@
         })
         on_attach(client, bufnr)
       end,
+      cmd = { 'eslint', '--stdin' },
     })
 
     lspconfig.gdscript.setup(base_opts)
