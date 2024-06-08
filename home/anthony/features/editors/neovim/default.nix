@@ -32,6 +32,7 @@ in
       rubyDeps
       rust-analyzer
       (rust-bin.selectLatestNightlyWith (toolchain: toolchain.default))
+      sqls
       tailwindcss-language-server
       nodePackages.typescript-language-server
       
