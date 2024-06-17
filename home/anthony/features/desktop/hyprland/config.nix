@@ -15,11 +15,14 @@ in
     gaps_in=10
     gaps_out=10
     border_size=3
-    cursor_inactive_timeout=4
 
     # Base colors
     col.inactive_border=$inactive_color
     col.active_border=$color11 rgba(59595900) $color14 45deg
+  }
+
+  cursor {
+    inactive_timeout=4
   }
 
   group {
@@ -76,7 +79,7 @@ in
   }
 
   master {
-    new_is_master=false
+    new_status=master
     orientation=center
     always_center_master=true
   }
@@ -149,7 +152,7 @@ in
 
 
   # Window manager controls
-  bind=SUPER,y,overview:toggle
+  # bind=SUPER,y,overview:toggle
 
   bind=SUPERSHIFT,q,killactive
   bind=SUPERSHIFT,e,exit

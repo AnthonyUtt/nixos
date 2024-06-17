@@ -19,8 +19,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland = {
-      url = "github:hyprwm/hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
+      type = "git";
+      url = "https://github.com/hyprwm/Hyprland";
+      submodules = true;
     };
     hyprwm-contrib.url = "github:hyprwm/contrib";
     Hyprspace = {

@@ -20,7 +20,7 @@ in
 
       # Language servers
       nodejs_20
-      nodePackages.bash-language-server
+      # nodePackages.bash-language-server
       nodePackages.vscode-langservers-extracted
       docker-compose-language-service
       dockerfile-language-server-nodejs
