@@ -79,7 +79,7 @@ in
   }
 
   master {
-    new_status=master
+    new_status=slave
     orientation=center
     always_center_master=true
   }

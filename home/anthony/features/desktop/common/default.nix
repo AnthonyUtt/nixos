@@ -30,5 +30,6 @@
     thunderbird
     libation
     cozy
+    dbeaver-bin
   ];
 }
