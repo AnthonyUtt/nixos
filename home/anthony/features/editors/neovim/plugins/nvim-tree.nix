@@ -6,6 +6,9 @@
       filters = {
         dotfiles = false,
         exclude = { vim.fn.stdpath "config" .. "/lua/custom" },
+        custom = {
+          "^.git$",
+        },
       },
       disable_netrw = true,
       hijack_netrw = true,
@@ -23,8 +26,7 @@
         preserve_window_proportions = true,
       },
       git = {
-        enable = false,
-        ignore = true,
+        enable = true,
       },
       filesystem_watchers = {
         enable = true,
@@ -40,15 +42,16 @@
         highlight_opened_files = "none",
 
         indent_markers = {
-          enable = false,
+          enable = true,
         },
 
         icons = {
+          -- git_placement = "signcolumn",
           show = {
             file = true,
             folder = true,
             folder_arrow = true,
-            git = false,
+            git = true,
           },
 
           glyphs = {
