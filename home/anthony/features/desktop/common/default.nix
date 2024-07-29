@@ -29,7 +29,7 @@
     logseq
     thunderbird
     libation
-    cozy
+    # cozy
     dbeaver-bin
   ];
 }
