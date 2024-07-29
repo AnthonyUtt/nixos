@@ -6,14 +6,17 @@
       on_attach = function(bufnr)
         gs = package.loaded.gitsigns
         local wk = require("which-key")
-        wk.register({
-          ['<leader>gb'] = {
+        wk.add({
+          {
+            '<leader>gb',
             function()
               gs.blame_line({ full = true })
             end,
-            "git blame line"
+            desc = "git blame line",
+            buffer = bufnr,
+            silent = true,
           }
-        }, { buffer = bufnr, silent = true })
+        })
       end,
     })
   '';

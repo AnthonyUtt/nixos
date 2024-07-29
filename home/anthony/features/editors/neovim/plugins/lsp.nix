@@ -133,64 +133,69 @@
 
     -- keybinds
     local wk = require("which-key")
-    wk.register({
-      ["<leader>"] = {
-        f = {
-          function()
-            vim.diagnostic.open_float { border = "rounded" }
-          end,
-          "floating diagnostic"
-        },
-        ls = {
-          function()
-            vim.lsp.buf.signature_help()
-          end,
-          "LSP signature help"
-        },
-        D = {
-          function()
-            vim.lsp.buf.type_definition()
-          end,
-          "LSP type definition"
-        },
-        ra = {
-          function()
-            vim.lsp.buf.rename()
-          end,
-          "LSP rename"
-        },
-        ca = {
-          function()
-            vim.lsp.buf.code_action()
-          end,
-          "LSP code action"
-        },
+    wk.add({
+      {
+        "<leader>f",
+        function()
+          vim.diagnostic.open_float { border = "rounded" }
+        end,
+        desc = "floating diagnostic",
       },
-      g = {
-        D = {
-          function()
-            vim.lsp.buf.declaration()
-          end,
-          "LSP declaration"
-        },
-        d = {
-          function()
-            vim.lsp.buf.definition()
-          end,
-          "LSP definition"
-        },
-        i = {
-          function()
-            vim.lsp.buf.implementation()
-          end,
-          "LSP implementation"
-        }
+      {
+        "<leader>ls",
+        function()
+          vim.lsp.buf.signature_help()
+        end,
+        desc = "LSP signature help",
       },
-      K = {
+      {
+        "<leader>D",
+        function()
+          vim.lsp.buf.type_definition()
+        end,
+        desc = "LSP type definition",
+      },
+      {
+        "<leader>ra",
+        function()
+          vim.lsp.buf.rename()
+        end,
+        desc = "LSP rename",
+      },
+      {
+        "<leader>ca",
+        function()
+          vim.lsp.buf.code_action()
+        end,
+        desc = "LSP code action",
+      },
+      {
+        "gD",
+        function()
+          vim.lsp.buf.declaration()
+        end,
+        desc = "LSP declaration",
+      },
+      {
+        "gd",
+        function()
+          vim.lsp.buf.definition()
+        end,
+        desc = "LSP definition",
+      },
+      {
+        "gi",
+        function()
+          vim.lsp.buf.implementation()
+        end,
+        desc = "LSP implementation",
+      },
+      {
+        "K",
         function()
           vim.lsp.buf.hover()
         end,
-        "LSP hover",
+        desc = "LSP hover",
       },
     })
   '';

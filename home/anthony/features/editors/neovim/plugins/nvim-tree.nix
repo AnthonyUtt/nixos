@@ -85,9 +85,9 @@
 
     -- keybinds
     local wk = require("which-key")
-    wk.register({
-      ['<C-b>'] = { '<cmd> NvimTreeToggle<CR>', "Toggle NvimTree" },
-      ['<C-e>'] = { '<cmd> NvimTreeFocus<CR>', "Focus NvimTree" }
+    wk.add({
+      { '<C-b>', '<cmd> NvimTreeToggle<CR>', desc = "Toggle NvimTree" },
+      { '<C-e>', '<cmd> NvimTreeFocus<CR>', desc = "Focus NvimTree" }
     })
 
     vim.g.nvimtree_side = nvim_tree_options.view.side

@@ -5,12 +5,10 @@
     require("trouble").setup()
 
     local wk = require("which-key")
-    wk.register({
-      ["<leader>x"] = {
-        x = { "<cmd>TroubleToggle<cr>", "Toggle Trouble diagnostics" },
-        w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Trouble workspace diagnostics" },
-        d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Trouble document diagnostics" },
-      }
+    wk.add({
+      { "<leader>xx", "<cmd>TroubleToggle<cr>", desc = "Toggle Trouble diagnostics" },
+      { "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", desc = "Trouble workspace diagnostics" },
+      { "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", desc = "Trouble document diagnostics" },
     })
   '';
 }

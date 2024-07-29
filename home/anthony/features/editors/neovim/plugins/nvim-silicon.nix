@@ -20,8 +20,8 @@ in
     })
 
     local wk = require("which-key")
-    wk.register({
-      ["<leader>ss"] = { ":Silicon <CR>", "Screenshot selection (silicon)" }
-    }, { mode = "x" })
+    wk.add({
+      { "<leader>ss", ":Silicon <CR>", desc = "Screenshot selection (silicon)", mode = "x" }
+    })
   '';
 }
