@@ -13,6 +13,7 @@ in
 
   isWorkstation = true;
   wallpaper = wallpapers._16x10.planet-vector-art;
+  wallustPalette = "harddark16";
   primaryNetworkInterface = "wlp0s20f3";
 
   eww.showBattery = true;

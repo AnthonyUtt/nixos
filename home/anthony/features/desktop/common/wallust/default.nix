@@ -1,6 +1,5 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, config, ... }:
 let
-
   pywalfox-wrapper = pkgs.writeShellScriptBin "pywalfox-wrapper" ''
     ${pkgs.pywalfox}/bin/pywalfox start
   '';
@@ -11,7 +10,10 @@ in
     pywalfox
   ];
 
-  xdg.configFile."wallust/wallust.toml".source = ./wallust.toml;
+  xdg.configFile."wallust/wallust.toml".text = ''
+    palette = "${config.wallustPalette}"
+    ${lib.strings.fileContents ./wallust.toml}
+  '';
 
   xdg.configFile."wallust/templates" = {
     source = ./templates;

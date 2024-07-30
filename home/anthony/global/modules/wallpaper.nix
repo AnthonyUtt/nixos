@@ -9,4 +9,12 @@ in
       Wallpaper path
     '';
   };
+
+  options.wallustPalette = mkOption {
+    type = types.str;
+    default = "softdark16";
+    description = ''
+      Wallust color generation palette
+    '';
+  };
 }
