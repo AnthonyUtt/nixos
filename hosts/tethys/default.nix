@@ -15,6 +15,7 @@
     ../common/optional/kmonad
     ../common/optional/docker.nix
     ../common/optional/greetd.nix
+    ../common/optional/gamemode.nix
     ../common/optional/wayland.nix
     ../common/optional/flatpak.nix
   ];

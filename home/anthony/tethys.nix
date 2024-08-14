@@ -9,6 +9,7 @@ in
     ./features/desktop/common
     ./features/desktop/hyprland
     ./features/desktop/wireless
+    ./features/games/steam.nix
   ];
 
   isWorkstation = true;
