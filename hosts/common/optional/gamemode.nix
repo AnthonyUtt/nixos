@@ -16,6 +16,8 @@
 
   environment.systemPackages = [
     pkgs.vulkan-tools
+    pkgs.nvtopPackages.nvidia
+    pkgs.gamescope
   ];
 
   security.pam.loginLimits = [

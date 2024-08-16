@@ -17,6 +17,7 @@ in
 
   isWorkstation = true;
   wallpaper = wallpapers._32x9.fantasy-forest-floor;
+  wallustPalette = "harddark16";
   primaryNetworkInterface = "enp7s0";
 
   hyprland = {
@@ -38,7 +39,7 @@ in
 
   monitors = [
     {
-      name = "DP-2";
+      name = "DP-3";
       width = 5120;
       height = 1440;
       refreshRate = 120;

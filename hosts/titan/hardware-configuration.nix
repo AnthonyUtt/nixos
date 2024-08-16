@@ -12,9 +12,9 @@
     binfmt.emulatedSystems = [ "aarch64-linux" ];
     initrd = {
       availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
-      kernelModules = [ "amdgpu" ];
+      kernelModules = [ "nvidia" ];
     };
-    kernelModules = [ "kvm-amd" "amdgpu" ];
+    kernelModules = [ "nvidia" ];
     extraModulePackages = [ ];
     loader = {
       systemd-boot = {
@@ -54,7 +54,16 @@
     # extraPackages = [ pkgs.amdvlk ];
     # extraPackages32 = [ pkgs.driversi686Linux.amdvlk ];
   };
-  environment.variables.AMD_VULKAN_ICD = "RADV";
+  services.xserver.videoDrivers = ["nvidia"];
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+  # environment.variables.AMD_VULKAN_ICD = "RADV";
   #
   # services.xserver = {
   #   enable = true;

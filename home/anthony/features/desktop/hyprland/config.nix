@@ -6,6 +6,11 @@ in
 ''
   source=~/.cache/wal/colors-hyprland.conf
 
+  env = LIBVA_DRIVER_NAME,nvidia
+  env = XDG_SESSION_TYPE,wayland
+  env = GBM_BACKEND,nvidia-drm
+  env = __GLX_VENDOR_LIBRARY_NAME,nvidia
+
   $inactive_color=rgba(59595900)
   $shadow=0x44000000
   $shadow_inactive=0x66000000
@@ -23,6 +28,7 @@ in
 
   cursor {
     inactive_timeout=4
+    no_hardware_cursors = true
   }
 
   group {

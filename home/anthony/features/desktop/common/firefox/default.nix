@@ -12,7 +12,7 @@ in
         extensions = with pkgs.nur.repos.rycee.firefox-addons; [
           beyond-20
           bitwarden
-          clearurls
+          # clearurls
           darkreader
           enhanced-github
           gaoptout
