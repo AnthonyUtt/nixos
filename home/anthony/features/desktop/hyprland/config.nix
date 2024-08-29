@@ -37,7 +37,7 @@ in
   }
 
   decoration {
-    active_opacity=0.94
+    active_opacity=1
     inactive_opacity=0.84
     fullscreen_opacity=1.0
     rounding=5

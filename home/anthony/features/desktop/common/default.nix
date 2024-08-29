@@ -31,5 +31,6 @@
     libation
     # cozy
     dbeaver-bin
+    vlc
   ];
 }
