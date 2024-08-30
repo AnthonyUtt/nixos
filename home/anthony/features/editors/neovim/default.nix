@@ -3,7 +3,7 @@ let
   plugins = import ./plugins { inherit pkgs lib; };
 
   rubyDeps = pkgs.ruby.withPackages (p: with p; [
-    solargraph
+    ruby-lsp
   ]);
 in
 {

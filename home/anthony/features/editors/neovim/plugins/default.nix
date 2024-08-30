@@ -34,6 +34,7 @@ in{
   cmp-nvim-lsp = import ./cmp-nvim-lsp.nix { inherit pkgs lib; };
   cmp-buffer = import ./cmp-buffer.nix { inherit pkgs lib; };
   cmp-path = import ./cmp-path.nix { inherit pkgs lib; };
+  smoji-nvim = import ./smoji-nvim.nix { inherit pkgs lib; };
 
   # Status Line + Tab/Buffer Line
   lualine = import ./lualine.nix { inherit pkgs lib; };

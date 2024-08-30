@@ -93,7 +93,7 @@
       },
     })
 
-    lspconfig.solargraph.setup(base_opts)
+    lspconfig.ruby_lsp.setup(base_opts)
     lspconfig.sqlls.setup(base_opts)
     lspconfig.tailwindcss.setup(base_opts)
     lspconfig.tsserver.setup({
