@@ -22,15 +22,15 @@
   home = {
     sessionVariables = { XDG_CURRENT_DESKTOP = "Hyprland"; };
     packages = with pkgs; [
-      inputs.hyprwm-contrib.packages.${system}.grimblast
-      inputs.hyprland.packages.${system}.xdg-desktop-portal-hyprland
+      inputs.hyprwm-contrib.packages.${pkgs.stdenv.hostPlatform.system}.grimblast
+      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland
       xdg-desktop-portal-gtk
     ];
   };
 
   wayland.windowManager.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.default;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     plugins = [
       # inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
     ];

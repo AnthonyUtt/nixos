@@ -25,7 +25,7 @@ in
       docker-compose-language-service
       dockerfile-language-server-nodejs
       emmet-ls
-      nodePackages.eslint
+      # nodePackages.eslint
       lua-language-server
       nil
       nodePackages.prettier
