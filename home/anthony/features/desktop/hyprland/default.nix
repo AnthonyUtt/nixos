@@ -25,6 +25,7 @@
       inputs.hyprwm-contrib.packages.${pkgs.stdenv.hostPlatform.system}.grimblast
       inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland
       xdg-desktop-portal-gtk
+      egl-wayland
     ];
   };
 

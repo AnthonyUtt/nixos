@@ -10,6 +10,7 @@ in
   env = XDG_SESSION_TYPE,wayland
   env = GBM_BACKEND,nvidia-drm
   env = __GLX_VENDOR_LIBRARY_NAME,nvidia
+  env = ELECTRON_OZONE_PLATFORM_HINT,auto
 
   $inactive_color=rgba(59595900)
   $shadow=0x44000000
@@ -103,6 +104,10 @@ in
 
   gestures {
     workspace_swipe = true
+  }
+
+  render {
+    explicit_sync = 0
   }
 
   # Startup
