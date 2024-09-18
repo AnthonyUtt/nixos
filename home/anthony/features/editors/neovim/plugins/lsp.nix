@@ -96,7 +96,7 @@
     lspconfig.ruby_lsp.setup(base_opts)
     lspconfig.sqlls.setup(base_opts)
     lspconfig.tailwindcss.setup(base_opts)
-    lspconfig.tsserver.setup({
+    lspconfig.ts_ls.setup({
       capabilities = capabilities,
       on_attach = on_attach,
       before_init = function(params)
@@ -105,7 +105,7 @@
       on_new_config = function(new_config, new_root_dir)
         if new_root_dir:match("amplify/client$") then
           new_config.cmd = require("lspcontainers").command(
-            'tsserver',
+            'typescript-language-server',
             {
               root_dir = new_root_dir,
               docker_volume = "client_node_modules",

@@ -30,7 +30,6 @@
     thunderbird
     libation
     # cozy
-    dbeaver-bin
     vlc
   ];
 }

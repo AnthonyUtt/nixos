@@ -20,12 +20,12 @@ in
 
       # Language servers
       nodejs_20
-      # nodePackages.bash-language-server
+      nodePackages.bash-language-server
       nodePackages.vscode-langservers-extracted
       docker-compose-language-service
       dockerfile-language-server-nodejs
       emmet-ls
-      # nodePackages.eslint
+      nodePackages.eslint
       lua-language-server
       nil
       nodePackages.prettier
@@ -34,6 +34,7 @@ in
       (rust-bin.selectLatestNightlyWith (toolchain: toolchain.default))
       sqls
       tailwindcss-language-server
+      typescript
       nodePackages.typescript-language-server
       
       # For Rust debugging
