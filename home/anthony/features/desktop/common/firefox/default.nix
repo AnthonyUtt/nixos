@@ -29,6 +29,7 @@ in
           sidebery
           sourcegraph
           sponsorblock
+          stylus
           tabliss
           terms-of-service-didnt-read
           tomato-clock

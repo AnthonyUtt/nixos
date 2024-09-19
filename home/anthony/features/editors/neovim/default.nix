@@ -36,6 +36,7 @@ in
       tailwindcss-language-server
       typescript
       nodePackages.typescript-language-server
+      glsl_analyzer
       
       # For Rust debugging
       vscode-extensions.vadimcn.vscode-lldb.adapter

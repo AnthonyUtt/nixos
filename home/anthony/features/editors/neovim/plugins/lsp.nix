@@ -65,6 +65,7 @@
     })
 
     lspconfig.gdscript.setup(base_opts)
+    lspconfig.glsl_analyzer.setup(base_opts)
     lspconfig.html.setup(base_opts)
     lspconfig.jsonls.setup(base_opts)
 

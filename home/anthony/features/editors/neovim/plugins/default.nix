@@ -27,6 +27,7 @@ in{
   sqls-nvim = import ./sqls-nvim.nix { inherit pkgs lib; };
   vim-mustache-handlebars = import ./vim-mustache-handlebars.nix { inherit pkgs lib; };
   vim-jinja2-syntax = import ./vim-jinja2-syntax.nix { inherit pkgs lib; };
+  vim-glsl = import ./vim-glsl.nix { inherit pkgs lib; };
 
   # Code Completion
   nvim-cmp = import ./nvim-cmp.nix { inherit pkgs lib; };
