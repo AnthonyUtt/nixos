@@ -5,6 +5,9 @@ in
   options.hyprland = mkOption {
     type = types.submodule {
       options = {
+        env = mkOption {
+          type = types.lines;
+        };
         general = mkOption {
           type = types.lines;
         };
@@ -17,6 +20,7 @@ in
       };
     };
     default = {
+      env = "";
       general = ''
         layout=dwindle
       '';

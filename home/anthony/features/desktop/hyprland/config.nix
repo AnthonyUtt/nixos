@@ -6,10 +6,7 @@ in
 ''
   source=~/.cache/wal/colors-hyprland.conf
 
-  env = LIBVA_DRIVER_NAME,nvidia
-  env = XDG_SESSION_TYPE,wayland
-  env = GBM_BACKEND,nvidia-drm
-  env = ELECTRON_OZONE_PLATFORM_HINT,auto
+  ${hyprland.env}
 
   $inactive_color=rgba(59595900)
   $shadow=0x44000000

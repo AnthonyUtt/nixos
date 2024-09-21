@@ -20,6 +20,7 @@ in
   eww.showBattery = true;
 
   hyprland = {
+    env = "";
     general = "";
     bindings = ''
       bind=SUPER,n,exec,$HOME/.config/hyprland-fzfify/new-workspace

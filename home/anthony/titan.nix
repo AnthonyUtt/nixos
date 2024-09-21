@@ -21,6 +21,12 @@ in
   primaryNetworkInterface = "enp7s0";
 
   hyprland = {
+    env = ''
+      env = LIBVA_DRIVER_NAME,nvidia
+      env = XDG_SESSION_TYPE,wayland
+      env = GBM_BACKEND,nvidia-drm
+      env = ELECTRON_OZONE_PLATFORM_HINT,auto
+    '';
     general = ''
       layout=master
     '';
