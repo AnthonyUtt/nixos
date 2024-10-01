@@ -17,7 +17,8 @@ in
     font = {
       # https://www.programmingfonts.org/
       # name = "FiraCode Nerd Font";
-      name = "ComicShannsMono Nerd Font";
+      # name = "ComicShannsMono Nerd Font";
+      name = "Departure Mono";
       size = 12;
     };
     settings = {

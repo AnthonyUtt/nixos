@@ -1,5 +1,6 @@
 { pkgs, ... }: {
   fonts.packages = with pkgs; [
+    departure-mono
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
