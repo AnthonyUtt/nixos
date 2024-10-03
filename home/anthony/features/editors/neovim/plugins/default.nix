@@ -54,4 +54,6 @@ in{
   telescope = import ./telescope.nix { inherit pkgs lib; };
   trouble = import ./trouble.nix { inherit pkgs lib; };
   nvim-silicon = import ./nvim-silicon.nix { inherit pkgs lib; };
+  nvim-ufo = import ./nvim-ufo.nix { inherit pkgs lib; };
+  promise-async = import ./promise-async.nix { inherit pkgs lib; };
 }
