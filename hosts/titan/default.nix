@@ -42,7 +42,9 @@
     portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
 
-  services = { };
+  services = {
+    udev.packages = [ pkgs.android-udev-rules ];
+  };
 
   # Enable polkit for Sway/Wayland
   security.polkit.enable = true;
