@@ -9,9 +9,9 @@ in
     syntaxHighlighting.enable = true;
     historySubstringSearch.enable = true;
     history.ignoreAllDups = true;
-    initExtraFirst = ''
-      (cat ~/.cache/wallust/sequences &)
-    '';
+    # initExtraFirst = ''
+    #   (cat ~/.cache/wallust/sequences &)
+    # '';
     initExtra = ''
       ${lib.strings.fileContents ./env.zsh}
       ${lib.strings.fileContents ./aliases.zsh}

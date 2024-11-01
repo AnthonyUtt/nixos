@@ -6,6 +6,7 @@
     ./misc-tools.nix
     ./ssh.nix
     ./superfile
+    ./zellij
     ./zsh
   ];
 
@@ -15,7 +16,6 @@
     fd
     jq
     yarn
-    zellij
     zoxide
   ];
 }

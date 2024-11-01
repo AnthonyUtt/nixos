@@ -22,7 +22,7 @@ in
           onepassword-password-manager
           privacy-badger
           privacy-possum
-          pywalfox
+          # pywalfox
           react-devtools
           reduxdevtools
           rust-search-extension

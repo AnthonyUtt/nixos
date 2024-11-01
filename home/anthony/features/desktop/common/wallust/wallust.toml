@@ -53,7 +53,7 @@ check_contrast = true
 colors = { template = 'templates/colors', target = '~/.cache/wal/colors', pywal = true }
 json = { template = 'templates/colors.json', target = '~/.cache/wal/colors.json' }
 hyprland = { template = 'templates/colors-hyprland.conf', target = '~/.cache/wal/colors-hyprland.conf', pywal = true }
-zellij = { template = 'templates/colors-zellij.kdl', target = '~/.config/zellij/themes/colors-zellij.kdl', pywal = true }
+# zellij = { template = 'templates/colors-zellij.kdl', target = '~/.config/zellij/themes/colors-zellij.kdl', pywal = true }
 vim = { template = 'templates/colors-wal.vim', target = '~/.cache/wal/colors-wal.vim', pywal = true }
 kitty = { template = 'templates/colors-kitty.conf', target = '~/.cache/wal/colors-kitty.conf', pywal = true }
 
