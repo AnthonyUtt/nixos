@@ -10,6 +10,7 @@ in{
   nui = import ./nui.nix { inherit pkgs lib; };
   which-key = import ./which-key.nix { inherit pkgs lib; };
   nvim-dap = import ./nvim-dap.nix { inherit pkgs lib; };
+  dressing = import ./dressing-nvim.nix { inherit pkgs lib; };
 
   # File Tree
   nvim-tree = import ./nvim-tree.nix { inherit pkgs lib; };
@@ -28,6 +29,7 @@ in{
   vim-mustache-handlebars = import ./vim-mustache-handlebars.nix { inherit pkgs lib; };
   vim-jinja2-syntax = import ./vim-jinja2-syntax.nix { inherit pkgs lib; };
   vim-glsl = import ./vim-glsl.nix { inherit pkgs lib; };
+  flutter-tools-nvim = import ./flutter-tools-nvim.nix { inherit pkgs lib; };
 
   # Code Completion
   nvim-cmp = import ./nvim-cmp.nix { inherit pkgs lib; };

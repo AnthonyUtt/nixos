@@ -37,6 +37,8 @@ in
       typescript
       nodePackages.typescript-language-server
       glsl_analyzer
+      # dart
+      flutter
       
       # For Rust debugging
       vscode-extensions.vadimcn.vscode-lldb.adapter

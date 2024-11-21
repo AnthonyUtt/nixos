@@ -47,6 +47,13 @@
       },
     })
     -- lspconfig.cssmodules_ls.setup(base_opts)
+    
+    lspconfig.dartls.setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+      cmd = { 'dart', 'language-server', '--protocol=lsp' },
+    })
+
     lspconfig.docker_compose_language_service.setup(base_opts)
     lspconfig.dockerls.setup(base_opts)
     lspconfig.dotls.setup(base_opts)
