@@ -38,13 +38,13 @@ in
     inactive_opacity=0.84
     fullscreen_opacity=1.0
     rounding=5
-    drop_shadow=true
-    shadow_range=12
-    shadow_offset=3 3
+    # drop_shadow=true
+    # shadow_range=12
+    # shadow_offset=3 3
 
     # Shadow colors
-    col.shadow=$shadow
-    col.shadow_inactive=$shadow_inactive
+    # col.shadow=$shadow
+    # col.shadow_inactive=$shadow_inactive
 
     blur {
       enabled=true
