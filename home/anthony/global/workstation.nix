@@ -2,6 +2,7 @@
   imports = [
     # ../features/editors/nvchad
     ../features/editors/neovim
+    ../features/editors/android-studio.nix
     ./modules/eww.nix
     ./modules/hyprland.nix
     ./modules/interface.nix
