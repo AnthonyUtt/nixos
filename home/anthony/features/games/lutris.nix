@@ -7,7 +7,7 @@
         gnutls
         mpg123
         openal
-        v4l-utils
+        # v4l-utils
         libpulseaudio
         libgpg-error
         alsa-plugins

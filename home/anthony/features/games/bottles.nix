@@ -7,7 +7,8 @@
         gnutls
         mpg123
         openal
-        v4l-utils
+        # Hangs during check phase while building unordered-containers-0.2.20
+        # v4l-utils
         libpulseaudio
         libgpg-error
         alsa-plugins
