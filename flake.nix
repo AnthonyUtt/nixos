@@ -93,5 +93,16 @@
     };
 
     devShells."${system}" = import ./shells { inherit pkgs; };
+
+    templates = {
+      flutter = {
+        path = ./templates/flutter;
+        description = "A flutter development environment";
+      };
+      rust = {
+        path = ./templates/rust;
+        description = "A rust development environment";
+      };
+    };
   };
 }
