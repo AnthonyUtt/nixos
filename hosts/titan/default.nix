@@ -45,6 +45,13 @@
 
   services = {
     udev.packages = [ pkgs.android-udev-rules ];
+    syncthing = {
+      enable = true;
+      user = "anthony";
+      group = "users";
+      dataDir = "/home/anthony/Documents";
+      configDir = "/home/anthony/Documents/.config/syncthing";
+    };
   };
 
   # Enable polkit for Sway/Wayland

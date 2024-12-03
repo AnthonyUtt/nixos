@@ -41,16 +41,23 @@
       enable = true;
       keyboards = {
         options = {
-	  name = "laptop";
+          name = "laptop";
           device = "/dev/input/by-path/platform-i8042-serio-0-event-kbd";
-	  defcfg = {
+          defcfg = {
             enable = true;
-	    fallthrough = true;
-	    allowCommands = false;
-	  };
-	  config = builtins.readFile ../common/optional/kmonad/colemak-dh-extend-ansi.kbd;
-	};
+            fallthrough = true;
+            allowCommands = false;
+          };
+          config = builtins.readFile ../common/optional/kmonad/colemak-dh-extend-ansi.kbd;
+        };
       };
+    };
+    syncthing = {
+      enable = true;
+      user = "anthony";
+      group = "users";
+      dataDir = "/home/anthony/Documents";
+      configDir = "/home/anthony/Documents/.config/syncthing";
     };
   };
 
