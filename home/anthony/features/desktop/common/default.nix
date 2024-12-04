@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   imports = [
-    # ./chromium.nix
+    ./chromium.nix
     ./cursors.nix
     ./discord
     ./firefox
@@ -10,7 +10,7 @@
     ./pavucontrol.nix
     ./slack.nix
     ./spotify.nix
-    ./vivaldi
+    # ./vivaldi
     ./wallust
   ];
 
