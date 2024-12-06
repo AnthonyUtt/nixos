@@ -10,6 +10,7 @@
 
     ../common/optional/workstation.nix
     ../common/optional/wireless.nix
+    ../common/optional/wireguard
     ../common/optional/bluetooth.nix
     ../common/optional/pipewire.nix
     ../common/optional/kmonad
@@ -65,6 +66,7 @@
   security.polkit.enable = true;
 
   home-manager = {
+    backupFileExtension = "bak";
     extraSpecialArgs = { inherit inputs unstable; };
     users = {
       anthony = import ../../home/anthony/tethys.nix;
