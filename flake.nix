@@ -49,7 +49,7 @@
 
     overlays = {
       rust-overlay = rust-overlay.overlays.default;
-      nur = inputs.nur.overlay;
+      nur = inputs.nur.overlays.default;
       personal = import pkgs/overlay.nix;
     };
 

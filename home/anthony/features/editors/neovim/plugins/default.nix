@@ -18,7 +18,8 @@ in{
 
   # AI Suggestions
   # codeium = import ./codeium.nix { inherit pkgs lib; };
-  # copilot = import ./copilot.nix { inherit pkgs lib; };
+  copilot = import ./copilot.nix { inherit pkgs lib; };
+  copilot-chat = import ./copilot-chat.nix { inherit pkgs lib; };
 
   # Syntax Highlighting / Language Support
   treesitter = import ./nvim-treesitter.nix { inherit pkgs lib; };

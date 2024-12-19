@@ -43,9 +43,16 @@ in
       # For Rust debugging
       vscode-extensions.vadimcn.vscode-lldb.adapter
       graphviz
+
+      # For Copilot Chat
+      curl
+      git
+      lynx
     ];
 
-    extraLuaPackages = luaPkgs: [];
+    extraLuaPackages = luaPkgs: [
+      luaPkgs.tiktoken_core
+    ];
 
     plugins = builtins.attrValues plugins;
 

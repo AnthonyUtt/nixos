@@ -6,11 +6,10 @@
     noto-fonts-emoji
     fira-code
     fira-code-symbols
-    nerdfonts
     font-awesome
 
     # Custom fonts (see /pkgs/)
     koulen
     phosphor-icons
-  ];
+  ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 }

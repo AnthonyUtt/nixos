@@ -1,6 +1,6 @@
 { inputs, outputs, ... }: {
   imports = [
-    inputs.nur.nixosModules.nur
+    inputs.nur.modules.nixos.default
     inputs.sops-nix.nixosModules.sops
 
     # ./auto-upgrade.nix
