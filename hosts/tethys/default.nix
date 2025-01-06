@@ -10,6 +10,7 @@
 
     ../common/optional/workstation.nix
     ../common/optional/wireless.nix
+    ../common/optional/logitech.nix
     ../common/optional/wireguard
     ../common/optional/bluetooth.nix
     ../common/optional/pipewire.nix

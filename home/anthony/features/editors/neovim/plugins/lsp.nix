@@ -103,7 +103,7 @@
 
     lspconfig.ruby_lsp.setup(base_opts)
     lspconfig.sqlls.setup(base_opts)
-    lspconfig.tailwindcss.setup(base_opts)
+    -- lspconfig.tailwindcss.setup(base_opts)
     lspconfig.ts_ls.setup({
       capabilities = capabilities,
       on_attach = on_attach,
