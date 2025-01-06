@@ -16,6 +16,7 @@ in
     extraPackages = with pkgs; [
       gcc
       typescript
+      luajit
       silicon
 
       # Language servers

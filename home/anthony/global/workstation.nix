@@ -1,8 +1,10 @@
 { ... }: {
   imports = [
     # ../features/editors/nvchad
-    ../features/editors/neovim
+    # ../features/editors/neovim
+    ../features/editors/nvim-unmanaged
     ../features/editors/android-studio.nix
+
     ./modules/eww.nix
     ./modules/hyprland.nix
     ./modules/interface.nix
