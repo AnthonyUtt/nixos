@@ -1,6 +1,13 @@
 return {
   "AnthonyUtt/lspcontainers.nvim",
   "ethanholz/nvim-lastplace",
+  "onsails/lspkind.nvim",
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    opts = require "configs.copilot",
+  },
   {
     "michaelrommel/nvim-silicon",
     lazy = true,
@@ -25,6 +32,12 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
+    end,
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function()
+      return require "configs.cmp"
     end,
   },
   {

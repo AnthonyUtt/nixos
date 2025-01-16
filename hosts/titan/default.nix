@@ -17,6 +17,7 @@
     ../common/optional/gamemode.nix
     ../common/optional/vial.nix
     ../common/optional/wayland.nix
+    ../common/optional/printing.nix
   ];
 
   # system.build-settings = {
