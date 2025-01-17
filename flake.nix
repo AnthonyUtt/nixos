@@ -24,8 +24,8 @@
       submodules = true;
     };
     hyprwm-contrib.url = "github:hyprwm/contrib";
-    Hyprspace = {
-      url = "github:KZDKM/Hyprspace";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
     sops-nix = {

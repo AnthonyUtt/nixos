@@ -1,4 +1,7 @@
-{ inputs, outputs, pkgs, config, lib, ... }: {
+{ inputs, outputs, pkgs, config, lib, ... }: 
+let
+  system = pkgs.stdenv.hostPlatform.system;
+in {
   imports = [
     ../common
     ../common/wayland
@@ -22,8 +25,8 @@
   home = {
     sessionVariables = { XDG_CURRENT_DESKTOP = "Hyprland"; };
     packages = with pkgs; [
-      inputs.hyprwm-contrib.packages.${pkgs.stdenv.hostPlatform.system}.grimblast
-      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland
+      inputs.hyprwm-contrib.packages.${system}.grimblast
+      inputs.hyprland.packages.${system}.xdg-desktop-portal-hyprland
       xdg-desktop-portal-gtk
       egl-wayland
     ];
@@ -31,9 +34,9 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    plugins = [
-      # inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
+    package = inputs.hyprland.packages.${system}.hyprland;
+    plugins = with inputs.hyprland-plugins.packages.${system}; [
+      xtra-dispatchers
     ];
     extraConfig = let
       theme = import ../../../theme;
