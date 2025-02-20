@@ -10,6 +10,7 @@ in {
 
     extraPackages = with pkgs; [
       gcc
+      gnumake
       typescript
       silicon
 
