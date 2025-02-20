@@ -19,6 +19,8 @@ in
       "git"
       "input"
       "uinput"
+      "libvirtd"
+      "kvm"
     ];
     packages = [ pkgs.home-manager ];
     openssh.authorizedKeys.keys = [

@@ -11,10 +11,35 @@
   boot = {
     binfmt.emulatedSystems = [ "aarch64-linux" ];
     initrd = {
-      availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
+      availableKernelModules = [
+        "nvme"
+        "xhci_pci"
+        "ahci"
+        "usbhid"
+        "usb_storage"
+        "sd_mod"
+
+        # VFIO
+        "vfio"
+        "vfio_iommu_type1"
+        "vfio_pci"
+      ];
       kernelModules = [ "nvidia" ];
     };
-    kernelModules = [ "nvidia" ];
+    kernelParams = [
+      "amd_iommu=on"
+      "iommu=pt"
+      "hugepagesz=1G"
+      "hugepages=16"
+    ];
+    kernelModules = [
+      "nvidia"
+      "nvidia_modeset"
+      "nvidia_uvm"
+      "nvidia_drm"
+
+      "kvm_amd"
+    ];
     extraModulePackages = [ ];
     loader = {
       systemd-boot = {

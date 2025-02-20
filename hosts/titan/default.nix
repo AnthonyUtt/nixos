@@ -9,6 +9,7 @@
 
     ../common/optional/workstation.nix
     ../common/optional/pipewire.nix
+    ../common/optional/libvirt.nix
     ../common/optional/logitech.nix
     ../common/optional/docker.nix
     ../common/optional/greetd.nix
