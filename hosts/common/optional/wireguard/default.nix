@@ -7,7 +7,7 @@ in
   networking.wg-quick = {
     interfaces = {
       wg0 = {
-        autostart = true;
+        autostart = false;
         address = [ "10.215.0.4/32" ];
         listenPort = port;
         dns = [ "10.37.15.254" ];

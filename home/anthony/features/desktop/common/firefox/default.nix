@@ -9,7 +9,7 @@ in
     profiles = {
       dev-edition-default = {
         bookmarks = bookmarks;
-        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+        extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
           beyond-20
           bitwarden
           # clearurls
