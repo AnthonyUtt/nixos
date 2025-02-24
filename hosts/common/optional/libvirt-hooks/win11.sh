@@ -1,5 +1,7 @@
 #!/run/current-system/sw/bin/bash
 
+notify-send "Libvirt Hook" "Running libvirt hook for Windows 11"
+
 function start_hook() {
   # Stops GUI
   systemctl isolate multi-user.target

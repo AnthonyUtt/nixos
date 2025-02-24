@@ -95,11 +95,16 @@ end
 return {
   provider = "ollama",
   auto_suggestions_provider = "ollama",
+  cursor_applying_provider = "ollama",
+  behaviour = {
+    -- auto_suggestions = true,
+    enable_cursor_planning_mode = true,
+  },
   vendors = {
     ollama = {
       api_key_name = "",
       endpoint = "https://ollama.uttho.me",
-      model = "qwen2.5-coder:14b",
+      model = "qwen2.5-coder:7b",
       parse_messages = parse_messages,
       parse_curl_args = parse_curl_args,
       parse_stream_data = parse_stream_data,

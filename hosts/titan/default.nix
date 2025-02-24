@@ -9,7 +9,6 @@
 
     ../common/optional/workstation.nix
     ../common/optional/pipewire.nix
-    ../common/optional/libvirt.nix
     ../common/optional/logitech.nix
     ../common/optional/docker.nix
     ../common/optional/greetd.nix
@@ -54,6 +53,14 @@
       group = "users";
       dataDir = "/home/anthony/Documents";
       configDir = "/home/anthony/Documents/.config/syncthing";
+    };
+    openssh = {
+      enable = true;
+      ports = [ 22 ];
+      settings = {
+        PasswordAuthentication = false;
+        PermitRootLogin = "no";
+      };
     };
   };
 
