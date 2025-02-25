@@ -93,9 +93,9 @@ local function parse_stream_data(data, handler_opts)
 end
 
 return {
-  provider = "ollama",
+  provider = "copilot",
   auto_suggestions_provider = "ollama",
-  cursor_applying_provider = "ollama",
+  cursor_applying_provider = "copilot",
   behaviour = {
     -- auto_suggestions = true,
     enable_cursor_planning_mode = true,
