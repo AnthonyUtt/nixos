@@ -100,6 +100,12 @@ return {
     -- auto_suggestions = true,
     enable_cursor_planning_mode = true,
   },
+  copilot = {
+    endpoint = "https://api.githubcopilot.com/",
+    model = "claude-3.7-sonnet",
+    temperature = 0,
+    max_tokens = 8192,
+  },
   vendors = {
     ollama = {
       api_key_name = "",
