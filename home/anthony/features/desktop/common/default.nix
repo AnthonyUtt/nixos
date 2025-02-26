@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   imports = [
     ./chromium.nix
+    ./cursor-ide
     ./cursors.nix
     ./discord
     ./firefox
