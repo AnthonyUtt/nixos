@@ -77,9 +77,21 @@ return {
     end,
   },
   {
-    "simrat39/rust-tools.nvim",
+    'mrcjkb/rustaceanvim',
+    version = '^5', -- Recommended
+    lazy = false, -- This plugin is already lazy
     config = function()
-      require("configs.rust_tools")
+      vim.g.rustaceanvim = {
+        server = {
+          default_settings = {
+            ["rust-analyzer"] = {
+              cargo = {
+                targetDir = "./.rust-analyzer"
+              }
+            }
+          }
+        }
+      }
     end,
   },
   {
