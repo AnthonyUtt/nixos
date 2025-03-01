@@ -18,6 +18,7 @@
     pkgs.vulkan-tools
     pkgs.nvtopPackages.nvidia
     pkgs.gamescope
+    pkgs.mangohud
   ];
 
   security.pam.loginLimits = [
