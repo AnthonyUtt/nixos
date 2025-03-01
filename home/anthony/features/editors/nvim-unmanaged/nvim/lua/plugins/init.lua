@@ -77,6 +77,12 @@ return {
     end,
   },
   {
+    "simrat39/rust-tools.nvim",
+    config = function()
+      require("configs.rust_tools")
+    end,
+  },
+  {
     "hrsh7th/nvim-cmp",
     opts = function()
       return require "configs.cmp"
