@@ -2,7 +2,7 @@ local M = {}
 
 M.config = function()
   -- load defaults i.e lua_lsp
-  require("nvchad.configs.lspconfig").defaults()
+  -- require("nvchad.configs.lspconfig").defaults()
 
   local lspconfig = require "lspconfig"
 
@@ -90,6 +90,25 @@ M.config = function()
       },
     },
   })
+
+  -- lspconfig.rust_analyzer.setup({
+  --   on_attach = on_attach,
+  --   capabilities = capabilities,
+  --   on_init = on_init,
+  --   filetypes = {"rust"},
+  --   root_dir = lspconfig.util.root_pattern("Cargo.toml"),
+  --   settings = {
+  --     ["rust-analyzer"] = {
+  --       checkOnSave = {
+  --         enable = true,
+  --         command = 'check',
+  --         extraArgs = {
+  --           "--target-dir", "./.rust-analyzer",
+  --         }
+  --       }
+  --     }
+  --   },
+  -- })
 
   lspconfig.ts_ls.setup({
     capabilities = capabilities,

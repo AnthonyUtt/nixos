@@ -26,8 +26,8 @@ in {
       lua-language-server
       nodePackages.prettier
       rubyDeps
-      # rust-analyzer
-      # (rust-bin.selectLatestNightlyWith (toolchain: toolchain.default))
+      rust-analyzer
+      (rust-bin.selectLatestNightlyWith (toolchain: toolchain.default))
       sqls
       tailwindcss-language-server
       nodePackages.typescript-language-server

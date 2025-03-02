@@ -76,6 +76,7 @@ return {
       require("configs.lspconfig").config()
     end,
   },
+  { "williamboman/mason.nvim", enable = false },
   {
     'mrcjkb/rustaceanvim',
     version = '^5', -- Recommended
