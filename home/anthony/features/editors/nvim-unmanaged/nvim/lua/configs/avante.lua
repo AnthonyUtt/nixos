@@ -4,7 +4,7 @@ return {
   cursor_applying_provider = "applying",
   behaviour = {
     auto_suggestions = false,
-    enable_cursor_planning_mode = true,
+    enable_cursor_planning_mode = false,
   },
   copilot = {
     endpoint = "https://api.githubcopilot.com/",
@@ -23,7 +23,7 @@ return {
     applying = {
       api_key_name = "",
       endpoint = "https://ollama.uttho.me",
-      model = "gemma3:4b",
+      model = "llama3.2:3b",
       temperature = 0,
       max_tokens = 32768,
     },
