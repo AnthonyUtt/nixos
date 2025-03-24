@@ -91,6 +91,21 @@ M.config = function()
     },
   })
 
+  -- lspconfig.ruby_lsp.setup({
+  --   on_attach = on_attach,
+  --   capabilities = capabilities,
+  --   on_init = on_init,
+  --   init_options = {
+  --     formatter = 'standard',
+  --     linters = { 'standard' },
+  --     addonSettings = {
+  --       ["Ruby LSP Rails"] = {
+  --         enablePendingMigrationsPrompt = false,
+  --       },
+  --     },
+  --   },
+  -- })
+
   -- lspconfig.rust_analyzer.setup({
   --   on_attach = on_attach,
   --   capabilities = capabilities,

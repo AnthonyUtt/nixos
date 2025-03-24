@@ -5,7 +5,7 @@
     ./cursors.nix
     ./discord
     ./firefox
-    ./eww
+    # ./eww
     ./light.nix
     ./obsidian.nix
     ./pavucontrol.nix
@@ -34,4 +34,6 @@
     # cozy
     vlc
   ];
+
+  services.opensnitch-ui.enable = true;
 }

@@ -5,7 +5,7 @@
     ../features/editors/nvim-unmanaged
     ../features/editors/android-studio.nix
 
-    ./modules/eww.nix
+    ./modules/waybar.nix
     ./modules/hyprland.nix
     ./modules/interface.nix
     ./modules/monitors.nix

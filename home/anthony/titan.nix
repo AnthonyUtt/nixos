@@ -20,6 +20,11 @@ in
   wallustPalette = "harddark16";
   primaryNetworkInterface = "enp7s0";
 
+  waybar = {
+    showBluetooth = false;
+    cpuSensorName = "asusec-isa-0000";
+  };
+
   hyprland = {
     env = ''
       env = LIBVA_DRIVER_NAME,nvidia

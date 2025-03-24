@@ -17,7 +17,10 @@ in
   wallustPalette = "harddark16";
   primaryNetworkInterface = "wlp0s20f3";
 
-  eww.showBattery = true;
+  waybar = {
+    showBluetooth = true;
+    cpuSensorName = "coretemp-isa-0000";
+  };
 
   hyprland = {
     env = "";

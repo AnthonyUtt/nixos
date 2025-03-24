@@ -79,24 +79,20 @@ scale trough {
         }
     }
 
-    &.time {
-        .hour, .minute {
-            font-size: 2rem;
-        }
+    .hour, .minute {
+        font-size: 2rem;
     }
 
-    &.date {
-        .month {
-            font-size: 1.5rem;
-        }
+    .month {
+        font-size: 1.5rem;
+    }
 
-        .day {
-            font-size: 2rem;
-        }
+    .day {
+        font-size: 2rem;
+    }
 
-        .year {
-            font-size: 1rem;
-        }
+    .year {
+        font-size: 1rem;
     }
 }
 

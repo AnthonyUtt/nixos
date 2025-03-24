@@ -31,7 +31,6 @@
 (defwidget _bar_bottom []
  (box :class 'bar__bottom' :orientation 'v' :vexpand false :hexpand false :valign 'end' :space-evenly false
   (_clock)
-  (_network)
   (_volume)
   (literal :content { SHOW_BATTERY ? '(_battery)' : '' } )
   (_power)
@@ -124,40 +123,26 @@
 
 ;; Clock
 (defwidget _clock []
- (eventbox :onclick '${EWW_CMD} update SHOW_DATE=${!SHOW_DATE}'
-           :onhover '${EWW_CMD} update CLOCK=true'
+ (eventbox :onhover '${EWW_CMD} update CLOCK=true'
            :onhoverlost '${EWW_CMD} update CLOCK=false'
-  (literal :content {SHOW_DATE ? _clock_date_var : _clock_time_var})
+  (box :class 'clock ${CLOCK ? 'active' : ''}' :orientation 'v' :space-evenly false
+   (label :class 'icon-clock' :text '')
+   (box :orientation 'v' :space-evenly false :spacing -25
+    (label :class 'hour' :text '${systime.hour}')
+    (label :class 'minute' :text '${systime.min}')
+   )
+   (box :orientation 'v' :space-evenly false :spacing -15
+    (label :class 'day' :text '${systime.day}')
+    (label :class 'month' :text '${systime.month}')
+    (label :class 'year' :text '${systime.year}')
+   )
+  )
  )
 )
 (defvar CLOCK false)
-(defvar SHOW_DATE false)
 (defpoll systime :interval '5s'
  :initial `date +'{"hour":"%H","min":"%M"}'`
  `date +'{"hour":"%H","min":"%M","month":"%b","day":"%d","year":"%Y"}'`)
-
-(defwidget _clock_time []
- (box :class 'clock time ${CLOCK ? 'active' : ''}' :orientation 'v' :space-evenly false
-  (label :class 'icon-clock' :text '')
-  (box :orientation 'v' :space-evenly false :spacing -25
-   (label :class 'hour' :text '${systime.hour}')
-   (label :class 'minute' :text '${systime.min}')
-  )
- )
-)
-(defvar _clock_time_var "(_clock_time)")
-
-(defwidget _clock_date []
- (box :class 'clock date ${CLOCK ? 'active' : ''}' :orientation 'v' :space-evenly false
-  (label :class 'icon-clock' :text '󰃮')
-  (box :orientation 'v' :space-evenly false :spacing -15
-   (label :class 'day' :text '${systime.day}')
-   (label :class 'month' :text '${systime.month}')
-   (label :class 'year' :text '${systime.year}')
-  )
- )
-)
-(defvar _clock_date_var "(_clock_date)")
 
 ;; Battery
 (defwidget _battery []

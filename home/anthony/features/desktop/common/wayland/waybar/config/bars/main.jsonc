@@ -166,8 +166,8 @@
     "orientation": "inherit",
     "modules": [
       "custom/vpn",
-      "group/network",
-      "group/bluetooth"
+      "group/network"
+      //"group/bluetooth"
     ]
   },
   "group/together": {
