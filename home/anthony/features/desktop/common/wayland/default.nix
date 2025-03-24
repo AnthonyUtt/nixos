@@ -2,7 +2,7 @@
   imports = [
     ./kitty.nix
     ./mako.nix
-    ./waybar.nix
+    ./waybar
     ./wofi
   ];
 

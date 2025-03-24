@@ -106,8 +106,8 @@ in
   }
 
   # Startup
-  exec-once=eww -c $HOME/.config/eww open topbar
   exec-once=mako
+  exec-once=waybar
   exec-once=wallust run ${wallpaper} --quiet
   exec-once=pywalfox update
   exec=swaybg -i ${wallpaper} --mode fill
