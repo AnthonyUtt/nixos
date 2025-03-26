@@ -35,3 +35,6 @@ load_mappings(lsp)
 
 local gitsigns = require("configs.gitsigns").mappings
 load_mappings(gitsigns)
+
+local flash = require("configs.flash").mappings
+load_mappings(flash)

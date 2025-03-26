@@ -1,5 +1,5 @@
 { ... }: {
   services.opensnitch = {
-    enable = false;
+    # enable = true;
   };
 }

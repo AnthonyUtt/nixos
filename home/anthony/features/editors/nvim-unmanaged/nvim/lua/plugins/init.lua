@@ -62,13 +62,7 @@ return {
   {
     "folke/flash.nvim",
     event = "VeryLazy",
-    opts = {
-      search = {
-        mode = function(str)
-          return "\\<" .. str
-        end,
-      },
-    },
+    opts = require("configs.flash").opts,
   },
   {
     "neovim/nvim-lspconfig",
