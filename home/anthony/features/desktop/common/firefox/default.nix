@@ -8,7 +8,10 @@ in
     package = pkgs.firefox-devedition;
     profiles = {
       dev-edition-default = {
-        bookmarks = bookmarks;
+        bookmarks = {
+          force = true;
+          settings = bookmarks;
+        };
         extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
           beyond-20
           bitwarden
@@ -37,7 +40,7 @@ in
           webhint
         ];
         search = {
-          default = "DuckDuckGo";
+          default = "ddg";
           force = true;
         };
         settings = {
