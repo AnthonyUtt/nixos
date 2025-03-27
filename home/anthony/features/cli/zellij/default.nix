@@ -3,6 +3,7 @@
     enable = true;
     enableZshIntegration = true;
     settings = {
+      show_startup_tips = false;
       ui = {
         pane_frames = {
           rounded_corners = true;
