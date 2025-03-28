@@ -29,9 +29,10 @@ keymap("v", "p", '"_dP', opts)
 keymap("n", "<Esc>", "<Esc>:noh<CR>", opts)
 
 -- VSCode keymaps
-keymap({"n", "v"}, "<leader>t", "<cmd>lua require('vscode').action('workbench.action.terminal.toggleTerminal')<CR>")
+keymap({"n", "v"}, "<leader>tt", "<cmd>lua require('vscode').action('workbench.action.terminal.toggleTerminal')<CR>")
+keymap({"n", "v"}, "<leader>tz", "<cmd>lua require('vscode').action('workbench.action.toggleZenMode')<CR>")
 keymap({"n", "v"}, "<leader>b", "<cmd>lua require('vscode').action('editor.debug.action.toggleBreakpoint')<CR>")
--- keymap({"n", "v"}, "<leader>d", "<cmd>lua require('vscode').action('editor.action.showHover')<CR>")
+keymap({"n", "v"}, "K", "<cmd>lua require('vscode').action('editor.action.showHover')<CR>")
 keymap({"n", "v"}, "<leader>ca", "<cmd>lua require('vscode').action('editor.action.quickFix')<CR>")
 keymap({"n", "v"}, "<leader>xx", "<cmd>lua require('vscode').action('workbench.actions.view.problems')<CR>")
 keymap({"n", "v"}, "<leader>cn", "<cmd>lua require('vscode').action('notifications.clearAll')<CR>")
@@ -39,6 +40,7 @@ keymap({"n", "v"}, "<leader>ff", "<cmd>lua require('vscode').action('workbench.a
 keymap({"n", "v"}, "<leader>cp", "<cmd>lua require('vscode').action('workbench.action.showCommands')<CR>")
 keymap({"n", "v"}, "<leader>pr", "<cmd>lua require('vscode').action('code-runner.run')<CR>")
 keymap({"n", "v"}, "<leader>fd", "<cmd>lua require('vscode').action('editor.action.formatDocument')<CR>")
+keymap({"n", "v"}, "<leader>/", "<cmd>lua require('vscode').action('editor.action.commentLine')<CR>")
 
 -- harpoon keymaps
 keymap({"n", "v"}, "<leader>ha", "<cmd>lua require('vscode').action('vscode-harpoon.addEditor')<CR>")
@@ -56,6 +58,7 @@ keymap({"n", "v"}, "<leader>h9", "<cmd>lua require('vscode').action('vscode-harp
 
 -- project manager keymaps
 keymap({"n", "v"}, "<leader>pa", "<cmd>lua require('vscode').action('projectManager.saveProject')<CR>")
+keymap({"n", "v"}, "<leader>ps", "<cmd>lua require('vscode').action('projectManager.listProjects')<CR>")
 keymap({"n", "v"}, "<leader>po", "<cmd>lua require('vscode').action('projectManager.listProjectsNewWindow')<CR>")
 keymap({"n", "v"}, "<leader>pe", "<cmd>lua require('vscode').action('projectManager.editProjects')<CR>")
 

@@ -62,6 +62,16 @@
         PermitRootLogin = "no";
       };
     };
+
+    displayManager = {
+      defaultSession = "none+i3";
+    };
+
+    xserver = {
+      enable = true;
+      windowManager.i3.enable = true;
+      displayManager.startx.enable = true;
+    };
   };
 
   # Enable polkit for Sway/Wayland

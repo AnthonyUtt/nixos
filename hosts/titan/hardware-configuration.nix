@@ -80,6 +80,7 @@
     open = false;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
+    forceFullCompositionPipeline = true;
   };
   # environment.variables.AMD_VULKAN_ICD = "RADV";
   #

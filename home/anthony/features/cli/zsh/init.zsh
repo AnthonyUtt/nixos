@@ -5,10 +5,14 @@ autoload -U compinit && compinit
 # Start a zellij session if it hasn't been started yet
 export ZELLIJ_AUTO_ATTACH=true
 if [[ -z "$ZELLIJ" ]]; then
-    if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
-        zellij attach -c
+    if [[ "$VSCODE_INJECTION" == "1" ]]; then
+        # no-op
     else
-        zellij
+        if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+            zellij attach -c
+        else
+            zellij
+        fi
     fi
 
     if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then

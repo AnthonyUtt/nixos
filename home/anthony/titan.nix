@@ -8,6 +8,7 @@ in
 
     ./features/desktop/common
     ./features/desktop/hyprland
+    ./features/desktop/i3wm
 
     ./features/games/lutris.nix
     ./features/games/bottles.nix
