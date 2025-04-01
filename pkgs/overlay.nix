@@ -15,4 +15,10 @@ rec {
   qtgreet = prev.libsForQt5.callPackage ./qtgreet.nix { inherit wayqt dfapplications dfutils dflogin1; };
 
   pynvim-latest = prev.python311Packages.callPackage ./pynvim.nix { };
+  
+  # OpenSSH config check patch for VSCode (and derivatives)
+  openssh = prev.openssh.overrideAttrs (old: {
+    patches = (old.patches or []) ++ [ ./openssh-nocheckcfg.patch ];
+    doCheck = false;
+  });
 }

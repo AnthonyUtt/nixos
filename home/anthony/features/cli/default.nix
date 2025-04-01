@@ -17,5 +17,6 @@
     jq
     yarn
     zoxide
+    direnv
   ];
 }

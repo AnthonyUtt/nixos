@@ -17,7 +17,7 @@ in
   ];
 
   isWorkstation = true;
-  wallpaper = wallpapers._32x9.fantasy-forest-floor;
+  wallpaper = wallpapers._32x9.misty-forest;
   wallustPalette = "harddark16";
   primaryNetworkInterface = "enp7s0";
 

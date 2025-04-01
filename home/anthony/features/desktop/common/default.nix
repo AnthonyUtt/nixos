@@ -18,7 +18,7 @@
   xdg.mimeApps.enable = true;
 
   home.packages = with pkgs; [
-    beekeeper-studio
+    # beekeeper-studio
     dbeaver-bin
     # postman
     remmina

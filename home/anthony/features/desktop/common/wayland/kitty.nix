@@ -26,44 +26,75 @@ in
       enable_audio_bell = false;
     };
     extraConfig = ''
-      # Bamboo theme
-      # Taken from https://github.com/ribru17/bamboo.nvim/blob/master/extras/kitty/bamboo.conf
-      background              #252623
-      foreground              #f1e9d2
-      selection_background    #5b5e5a
-      selection_foreground    #f1e9d2
+      ## name: Everforest Light Soft
+      ## author: Emil Löfquist (https://github.com/ewal)
+      ## license: MIT
+      ## upstream: https://github.com/ewal/kitty-everforest/blob/master/themes/everforest_light_soft.conf
+      ## blurb: Light (soft) theme based on https://github.com/sainnhe/everforest for Vim.
 
-      cursor              #fff8f0
-      cursor_text_color   #0f0800
+      foreground                      #5c6a72
+      background                      #f8f0dc
+      selection_foreground            #829181
+      selection_background            #e6e9c4
 
-      active_tab_background       #f1e9d2
-      active_tab_foreground       #111210
-      inactive_tab_background     #3a3d37
-      inactive_tab_foreground     #5b5e5a
+      cursor                          #5c6a72
+      cursor_text_color               #efead4
 
-      color0  #1c1e1b
-      color8  #5b5e5a
+      url_color                       #3a94c5
 
-      color1  #e75a7c
-      color9  #e75a7c
+      active_border_color             #8da101
+      inactive_border_color           #b9c0ab
+      bell_border_color               #f57d26
+      visual_bell_color               none
 
-      color2  #8fb573
-      color10 #8fb573
+      wayland_titlebar_color          system
+      macos_titlebar_color            system
 
-      color3  #dbb651
-      color11 #dbb651
+      active_tab_background           #f8f0dc
+      active_tab_foreground           #5c6a72
+      inactive_tab_background         #e9e5cf
+      inactive_tab_foreground         #939f91
+      tab_bar_background              #efead4
+      tab_bar_margin_color            none
 
-      color4  #57a5e5
-      color12 #57a5e5
+      mark1_foreground                #f8f0dc
+      mark1_background                #3a94c5
+      mark2_foreground                #f8f0dc
+      mark2_background                #d3c6aa
+      mark3_foreground                #f8f0dc
+      mark3_background                #df69ba
 
-      color5  #aaaaff
-      color13 #aaaaff
+      #: black
+      color0                          #708089
+      color8                          #829181
 
-      color6  #70c2be
-      color14 #70c2be
+      #: red
+      color1                          #f85552
+      color9                          #e66868
 
-      color7  #f1e9dc
-      color15 #fff8f0
+      #: green
+      color2                          #8da101
+      color10                         #93b259
+
+      #: yellow
+      color3                          #dfa000
+      color11                         #dfa000
+
+      #: blue
+      color4                          #3a94c5
+      color12                         #3a94c5
+
+      #: magenta
+      color5                          #df69ba
+      color13                         #df69ba
+
+      #: cyan
+      color6                          #35a77c
+      color14                         #35a77c
+
+      #: white
+      color7                          #939f91
+      color15                         #a6b0a0
     '';
   };
 }

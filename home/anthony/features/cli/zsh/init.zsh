@@ -5,7 +5,7 @@ autoload -U compinit && compinit
 # Start a zellij session if it hasn't been started yet
 export ZELLIJ_AUTO_ATTACH=true
 if [[ -z "$ZELLIJ" ]]; then
-    if [[ "$VSCODE_INJECTION" == "1" ]]; then
+    if [[ "$TERM_PROGRAM" == "vscode" ]]; then
         # no-op
     else
         if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then

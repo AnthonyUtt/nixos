@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-	theme = "monekai",
+	theme = "everforest_light",
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },

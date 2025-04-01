@@ -5,4 +5,5 @@ in
 {
   space-colonization = mkWallpaper ./space_colonization-wallpaper-5120x1440.jpg;
   fantasy-forest-floor = mkWallpaper ./fantasy-forest-floor.png;
+  misty-forest = mkWallpaper ./misty-forest.jpg;
 }
