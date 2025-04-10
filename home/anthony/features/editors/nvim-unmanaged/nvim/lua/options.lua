@@ -44,3 +44,10 @@ o.updatetime = 250
 -- go to previous/next line with h,l,left arrow and right arrow
 -- when cursor reaches end/beginning of line
 o.whichwrap:append "<>[]hl"
+
+-- Update Avante highlight groups
+vim.cmd [[
+  hi! link AvanteSidebarWinSeparator Normal
+  hi! link AvanteSidebarWinHorizontalSeparator Normal
+  hi! link AvanteThirdTitle Normal
+]]

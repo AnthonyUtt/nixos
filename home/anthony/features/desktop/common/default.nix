@@ -32,6 +32,9 @@
     libation
     # cozy
     vlc
+    windsurf
+
+    aider-chat
   ];
 
   # services.opensnitch-ui.enable = true;
