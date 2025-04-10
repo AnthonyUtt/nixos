@@ -41,6 +41,9 @@ in {
       curl
       git
       lynx
+
+      # For Aider
+      aider-chat
     ];
   };
 

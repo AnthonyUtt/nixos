@@ -41,6 +41,16 @@ return {
       },
     },
   },
+  {
+    "GeorgesAlkhouri/nvim-aider",
+    cmd = "Aider",
+    dependencies = {
+      "folke/snacks.nvim",
+      "nvim-tree/nvim-tree.lua",
+    },
+    opts = require "configs.aider".opts,
+    keys = require "configs.aider".keys,
+  },
   "AnthonyUtt/lspcontainers.nvim",
   "ethanholz/nvim-lastplace",
   "onsails/lspkind.nvim",

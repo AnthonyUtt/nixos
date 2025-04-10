@@ -47,7 +47,6 @@ o.whichwrap:append "<>[]hl"
 
 -- Update Avante highlight groups
 vim.cmd [[
-  hi! link AvanteSidebarWinSeparator Normal
-  hi! link AvanteSidebarWinHorizontalSeparator Normal
-  hi! link AvanteThirdTitle Normal
+  hi! link AvanteSidebarWinSeparator NormalFloat
+  hi! link AvanteSidebarWinHorizontalSeparator NormalFloat
 ]]
