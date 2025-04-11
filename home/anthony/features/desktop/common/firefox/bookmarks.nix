@@ -52,6 +52,16 @@
     ];
   }
   {
+    name = "Bookmarklets";
+    toolbar = true;
+    bookmarks = [
+      {
+        name = "Read on Freedium";
+        url = "javascript:void(location.href='https://freedium.cfd/'+location.href)";
+      }
+    ];
+  }
+  {
     name = "AWS";
     url = "https://aws.amazon.com/";
     tags = [ "work" ];
