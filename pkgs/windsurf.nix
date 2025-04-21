@@ -1,69 +1,41 @@
 { stdenv, lib
 , fetchzip
 , autoPatchelfHook
-, glibc
-, libgcc
-, libglibutil
-, xorg
-, dbus
-, nss
-, ffmpeg-full
-, atkmm
+, wrapGAppsHook3
+, alsa-lib
+, at-spi2-atk
 , cups
 , libdrm
-, gtk3
-, pango
-, cairo
-, libxkbcommon
-, alsa-lib
 , libgbm
+, nss_latest
+, udev
+, xorg
 }:
 
 stdenv.mkDerivation rec {
   pname = "windsurf-editor";
-  version = "1.6.2";
+  version = "1.6.5";
 
-  src = fetchzip {
-    url = "https://windsurf-stable.codeiumdata.com/linux-x64/stable/1eabbe10abd0f4843e53460086ba8422a1aebe02/Windsurf-linux-x64-${version}.tar.gz";
+  src = builtins.fetchTarball {
+    url = "https://windsurf-stable.codeiumdata.com/linux-x64/stable/d87e525d4461b610eeaba26cba66153dd120ef47/Windsurf-linux-x64-${version}.tar.gz";
     sha256 = "sha256-AD3jivkSh5I41Uwz8i5iq9n+JTebPu3UcdZa1N1nogk=";
   };
 
-  nativeBuildInputs = [ autoPatchelfHook ];
-
-  buildInputs = [
-    glibc
-    libgcc
-    libglibutil
-    xorg.libX11
-    xorg.libXcomposite
-    xorg.libXdamage
-    xorg.libXext
-    xorg.libXfixes
-    xorg.libXrandr
-    xorg.libxkbfile
-    dbus
-    nss
-    ffmpeg-full
-    atkmm
-    cups
-    libdrm
-    gtk3
-    pango
-    cairo
-    libxkbcommon
+  nativeBuildInputs = [
     alsa-lib
+    at-spi2-atk
+    xorg.libxcb
+    libdrm
+    nss_latest
+    cups
+    wrapGAppsHook3
     libgbm
+    xorg.libxkbfile
+    autoPatchelfHook
   ];
+  runtimeDependencies = [ (lib.getLib udev) ];
 
-  sourceRoot = ".";
-
-  installPhase = ''
-    runHook preInstall
-    mkdir -p $out/bin
-    cp -r $src/* $out/bin/
-    install -m755 -D $src/windsurf $out/bin/windsurf
-    runHook postInstall
-  '';
+  postUnpack = "cp -r $src $out";
 
   meta = with lib; {
     homepage = "";
