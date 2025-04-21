@@ -9,6 +9,7 @@ in
     ./features/desktop/common
     ./features/desktop/hyprland
     ./features/desktop/i3wm
+    ./features/desktop/common/spotifyd.nix
 
     ./features/games/lutris.nix
     ./features/games/bottles.nix
