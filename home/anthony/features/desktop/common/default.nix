@@ -35,6 +35,7 @@
     windsurf
 
     aider-chat
+    codex
   ];
 
   # services.opensnitch-ui.enable = true;

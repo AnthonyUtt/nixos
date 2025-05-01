@@ -248,4 +248,6 @@ in
   ${hyprland.bindings}
 
   windowrule=float,title:^(hyprland-fzfify)$
+  windowrule=float,initialTitle:^(spaceback.me)$
+  windowrule=size 800 600,initialTitle:^(spaceback.me)$
 ''

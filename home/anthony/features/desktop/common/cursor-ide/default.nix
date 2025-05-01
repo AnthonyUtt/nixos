@@ -12,5 +12,6 @@ in {
       ];
     }))
     rubyDeps
+    pkgs.sox
   ];
 }

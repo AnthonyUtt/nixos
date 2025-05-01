@@ -6,7 +6,6 @@ rec {
   nvchad = prev.callPackage ./nvchad { };
   ventoy-latest = prev.callPackage ./ventoy { };
   pywalfox = prev.callPackage ./pywalfox.nix { };
-  windsurf = prev.callPackage ./windsurf.nix { };
 
   dfipc = prev.libsForQt5.callPackage ./dfipc.nix { };
   dflogin1 = prev.libsForQt5.callPackage ./dflogin1.nix { };

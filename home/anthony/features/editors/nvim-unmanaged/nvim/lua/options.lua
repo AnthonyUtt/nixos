@@ -50,3 +50,6 @@ vim.cmd [[
   hi! link AvanteSidebarWinSeparator NormalFloat
   hi! link AvanteSidebarWinHorizontalSeparator NormalFloat
 ]]
+
+-- Windsurf settings
+vim.g.codeium_disable_bindings = 1

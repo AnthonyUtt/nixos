@@ -32,6 +32,21 @@ return {
         },
       },
       {
+        -- support for image pasting
+        "HakonHarnes/img-clip.nvim",
+        event = "VeryLazy",
+        opts = {
+          -- recommended settings
+          default = {
+            embed_image_as_base64 = false,
+            prompt_for_file_name = false,
+            drag_and_drop = {
+              insert_mode = true,
+            },
+          },
+        },
+      },
+      {
         -- Make sure to set this up properly if you have lazy=true
         'MeanderingProgrammer/render-markdown.nvim',
         opts = {
@@ -56,7 +71,6 @@ return {
   "onsails/lspkind.nvim",
   {
     "zbirenbaum/copilot.lua",
-    commit = "99654fe9ad6cb2500c66b178a03326f75c95f176",
     cmd = "Copilot",
     event = "InsertEnter",
     opts = require "configs.copilot",
