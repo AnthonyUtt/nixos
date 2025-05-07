@@ -5,4 +5,20 @@ layout {
       plugin location="compact-bar"
     }
   }
+
+  tab name="notes" focus=true {
+    pane {
+      cwd "~/source/notes"
+      name "notes"
+      command "nvim"
+      focus true
+    }
+  }
+
+  tab name="amplify" {
+    pane {
+      cwd "~/source/work/amplify"
+      name "amplify"
+    }
+  }
 }

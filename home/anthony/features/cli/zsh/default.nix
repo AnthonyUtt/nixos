@@ -12,7 +12,7 @@ in
     # initExtraFirst = ''
     #   (cat ~/.cache/wallust/sequences &)
     # '';
-    initExtra = ''
+    initContent = ''
       ${lib.strings.fileContents ./env.zsh}
       ${lib.strings.fileContents ./aliases.zsh}
       ${if isWorkstation then lib.strings.fileContents ./init.zsh else ""}

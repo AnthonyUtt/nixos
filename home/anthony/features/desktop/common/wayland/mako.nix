@@ -6,41 +6,45 @@ in
   home.packages = [ pkgs.libnotify ];
   services.mako = {
     enable = true;
-    sort="-time";
-    layer="overlay";
-    anchor = "top-center";
-    defaultTimeout = 5000; # ms
-    ignoreTimeout = true;
 
-    # Formatting
-    width = 500;
-    height = 200;
-    margin = "10";
-    padding = "15";
-    backgroundColor = "#${theme.colors.notifications.background}CC";
-    textColor = "#${theme.colors.notifications.foreground}FF";
-    maxIconSize = 128;
+    settings = {
+      sort="-time";
+      layer="overlay";
+      anchor = "top-center";
+      default-timeout = 5000; # ms
+      ignore-timeout = true;
 
-    # Border
-    borderColor = null;
-    borderRadius = 5;
-    borderSize = 0;
+      # Formatting
+      width = 500;
+      height = 200;
+      margin = "10";
+      padding = "15";
+      background-color = "#${theme.colors.notifications.background}CC";
+      text-color = "#${theme.colors.notifications.foreground}FF";
+      max-icon-size = 128;
 
-    extraConfig = ''
-      on-button-left=dismiss
-      on-button-right=invoke-default-action
+      # Border
+      border-color = null;
+      border-radius = 5;
+      border-size = 0;
 
-      [urgency=low]
-      background-color=#${theme.colors.notifications.background}66
-      default-timeout=1500
+      on-button-left = "dismiss";
+      on-button-right = "invoke-default-action";
 
-      [urgency=critical]
-      border-color=#${theme.colors.error}FF
-      border-size=2
-
-      [category=mpd]
-      default-timeout=2000
-      group-by=category
-    '';
+      # "urgency=low" = {
+      #   background-color = "#${theme.colors.notifications.background}66";
+      #   default-timeout = 1500;
+      # };
+      #
+      # "urgency=critical" = {
+      #   background-color = "#${theme.colors.error}FF";
+      #   border-size = 2;
+      # };
+      #
+      # "category=mpd" = {
+      #   default-timeout = 2000;
+      #   group-by = "category";
+      # };
+    };
   };
 }
