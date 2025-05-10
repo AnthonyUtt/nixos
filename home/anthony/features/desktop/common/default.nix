@@ -33,6 +33,7 @@
     # cozy
     vlc
     windsurf
+    standardnotes
 
     aider-chat
     codex

@@ -1,6 +1,6 @@
 return {
-  mode = "legacy",
-  provider = "claude",
+  mode = "agentic",
+  provider = "openai",
   auto_suggestions_provider = nil,
   cursor_applying_provider = nil,
   behaviour = {
@@ -21,6 +21,14 @@ return {
     model = "claude-3-7-sonnet-20250219",
     temperature = 0,
     max_tokens = 4096,
+  },
+  openai = {
+    model = "o3-mini",
+    -- timeout = 120000, -- 2 minutes for reasoning models
+    timeout = 30000, -- 30 seconds for chat models
+    temperature = 0,
+    max_completion_tokens = 32768,
+    reasoning_effort = "medium", -- "low", "medium", "high"
   },
   copilot = {
     endpoint = "https://api.githubcopilot.com/",
