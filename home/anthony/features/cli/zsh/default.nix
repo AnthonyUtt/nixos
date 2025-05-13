@@ -16,6 +16,11 @@ in
       ${lib.strings.fileContents ./env.zsh}
       ${lib.strings.fileContents ./aliases.zsh}
       ${if isWorkstation then lib.strings.fileContents ./init.zsh else ""}
+
+      # Secrets
+      export OPENAI_API_KEY=$(cat ${config.sops.secrets.openai_api_key.path})
+      export ANTHROPIC_API_KEY=$(cat ${config.sops.secrets.anthropic_api_key.path})
+      export BRAVE_API_KEY=$(cat ${config.sops.secrets.brave_search_api_key.path})
     '';
 
     oh-my-zsh = {

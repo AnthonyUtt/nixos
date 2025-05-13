@@ -16,6 +16,9 @@ return {
   repo_map = {
     ignore_patterns = { "%.git", "%.worktree", "__pycache__", "node_modules" },
   },
+  web_search_engine = {
+    provider = "brave",
+  },
   claude = {
     endpoint = "https://api.anthropic.com",
     model = "claude-3-7-sonnet-20250219",
@@ -23,7 +26,7 @@ return {
     max_tokens = 4096,
   },
   openai = {
-    model = "o3-mini",
+    model = "o4-mini",
     -- timeout = 120000, -- 2 minutes for reasoning models
     timeout = 30000, -- 30 seconds for chat models
     temperature = 0,

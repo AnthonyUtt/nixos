@@ -10,6 +10,7 @@ in
   imports = [
     ../features/cli
     ./modules/workstation.nix
+    ./modules/sops.nix
   ];
 
   nixpkgs = {
