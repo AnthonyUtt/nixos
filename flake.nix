@@ -35,6 +35,8 @@
     nix-gaming.url = "github:fufexan/nix-gaming";
     superfile.url = "github:yorukot/superfile";
     cursor.url = "github:omarcresp/cursor-flake/main";
+    mcp-hub.url = "github:ravitemer/mcp-hub";
+    mcp-servers-nix.url = "github:natsukium/mcp-servers-nix";
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, rust-overlay, nix-gaming, ... }@inputs:

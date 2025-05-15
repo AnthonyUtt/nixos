@@ -1,8 +1,37 @@
-{ pkgs, ... }: 
+{ pkgs, inputs, config, ... }: 
 let
   rubyDeps = pkgs.ruby_3_1.withPackages (p: with p; [
     solargraph
   ]);
+
+  mcpServersConfig = inputs.mcp-servers-nix.lib.mkConfig pkgs {
+    programs = {
+      brave-search = {
+        enable = true;
+        passwordCommand = {
+          BRAVE_API_KEY = ["cat" "/run/secrets/brave_search_api_key"];
+        };
+      };
+      fetch.enable = true;
+      git.enable = true;
+      memory = {
+        enable = true;
+        env = {
+          MEMORY_FILE_PATH = "${config.home.homeDirectory}/.mcp/memory.json";
+        };
+      };
+    };
+
+    settings.servers = {
+      desktop-commander = {
+        command = "${pkgs.lib.getExe' pkgs.nodejs "npx"}";
+        args = [
+          "-y"
+          "@wonderwhy-er/desktop-commander"
+        ];
+      };
+    };
+  };
 in {
   programs.neovim = {
     enable = true;
@@ -11,6 +40,8 @@ in {
     extraPackages = with pkgs; [
       gcc
       gnumake
+      curl
+      git
       typescript
       silicon
 
@@ -37,18 +68,18 @@ in {
       # vscode-extensions.vadimcn.vscode-lldb.adapter
       # graphviz
 
-      # For Copilot Chat
-      curl
-      git
-      lynx
-
-      # For Aider
+      # AI stuff
       aider-chat
+      inputs.mcp-hub.packages."${pkgs.system}".default 
     ];
   };
 
-  xdg.configFile.nvim = {
-    source = ./nvim;
-    recursive = true;
+  xdg.configFile = {
+    nvim = {
+      source = ./nvim;
+      recursive = true;
+    };
+
+    "mcphub/servers.json".source = mcpServersConfig;
   };
 }

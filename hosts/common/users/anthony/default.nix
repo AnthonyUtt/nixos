@@ -13,6 +13,7 @@ in
       "audio"
       "video"
       "dialout"
+      "keys"
     ] ++ ifTheyExist [
       "network"
       "docker"

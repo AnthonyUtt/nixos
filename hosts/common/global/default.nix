@@ -7,6 +7,7 @@
     ./doas.nix
     ./locale.nix
     ./nix.nix
+    ./sops.nix
     ./zsh.nix
 
   ] ++ (builtins.attrValues outputs.nixosModules);

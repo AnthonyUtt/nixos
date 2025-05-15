@@ -1,11 +1,9 @@
 local M = {}
 
 M.opts = {
-  -- Command that executes Aider
-  aider_cmd = "OLLAMA_API_BASE=https://ollama.uttho.me aider",
   -- Command line arguments passed to aider
   args = {
-    "--model ollama_chat/deepcoder",
+    "--model openai/o4-mini",
     "--no-auto-commits",
     "--pretty",
     "--stream",

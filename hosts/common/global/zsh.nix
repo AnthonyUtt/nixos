@@ -11,5 +11,11 @@ in
       ncg = "doas nix-collect-garbage --delete-older-than 1d";
       ns = "(){ nix develop ~/source/nix#$1 ;}";
     };
+    shellInit = ''
+      # Secrets
+      export OPENAI_API_KEY=$(cat ${config.sops.secrets.openai_api_key.path})
+      export ANTHROPIC_API_KEY=$(cat ${config.sops.secrets.anthropic_api_key.path})
+      export BRAVE_API_KEY=$(cat ${config.sops.secrets.brave_search_api_key.path})
+    '';
   };
 }

@@ -51,6 +51,15 @@ return {
     },
   },
   {
+    "ravitemer/mcphub.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    cmd = { "MCPHub" },
+    lazy = false,
+    opts = require "configs.mcphub",
+  },
+  {
     "yetone/avante.nvim",
     event = "VeryLazy",
     lazy = false,
@@ -67,6 +76,7 @@ return {
       "ibhagwan/fzf-lua", -- for file_selector provider fzf
       "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
       "zbirenbaum/copilot.lua", -- for copilot provider
+      "ravitemer/mcphub.nvim",
       {
         -- support for image pasting
         "HakonHarnes/img-clip.nvim",
