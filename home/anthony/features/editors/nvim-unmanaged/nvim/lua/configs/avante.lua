@@ -1,5 +1,5 @@
 return {
-  mode = "agentic",
+  mode = "legacy",
   provider = "openai",
   auto_suggestions_provider = nil,
   cursor_applying_provider = nil,
@@ -35,9 +35,9 @@ return {
     max_tokens = 4096,
   },
   openai = {
-    model = "o3",
-    timeout = 120000, -- 2 minutes for reasoning models
-    -- timeout = 30000, -- 30 seconds for chat models
+    model = "o4-mini",
+    -- timeout = 120000, -- 2 minutes for reasoning models
+    timeout = 30000, -- 30 seconds for chat models
     temperature = 0,
     max_completion_tokens = 32768,
     reasoning_effort = "medium", -- "low", "medium", "high"
