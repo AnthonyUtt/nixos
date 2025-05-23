@@ -239,4 +239,8 @@ return {
   		},
   	},
   },
+  {
+    -- Other
+    "Glench/Vim-Jinja2-Syntax",
+  },
 }
