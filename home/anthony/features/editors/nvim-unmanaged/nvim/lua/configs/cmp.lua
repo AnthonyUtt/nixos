@@ -4,6 +4,11 @@ local opts = {
   completion = {
     completeopt = "menu,menuone,noselect,popup",
   },
+  snippet = {
+    expand = function(args)
+      -- no op
+    end,
+  },
   window = {
     completion = {
       winhighlight = "Normal:CmpPmenu,CursorLine:CmpSel,Search:PmenuSel",

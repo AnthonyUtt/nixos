@@ -215,8 +215,10 @@ return {
         "hlsl",
         "html",
         "javascript",
+        "jinja",
         "json",
         "kdl",
+        "liquid",
         "lua",
         "luadoc",
         "make",
@@ -242,5 +244,11 @@ return {
   {
     -- Other
     "Glench/Vim-Jinja2-Syntax",
+    init = function()
+      vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+        pattern = { "*.tera", "*.njk" },
+        command = "set ft=jinja",
+      })
+    end,
   },
 }
