@@ -17,6 +17,14 @@
         mode = "0440";
         group = "keys";
       };
+      vikunja_api_token = {
+        mode = "0440";
+        group = "keys";
+      };
+      linear_access_token = {
+        mode = "0440";
+        group = "keys";
+      };
     };
   };
 }

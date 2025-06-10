@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
     nur.url = "github:nix-community/NUR";
     hardware.url = "github:nixos/nixos-hardware";
     home-manager = {
@@ -37,6 +38,11 @@
     cursor.url = "github:omarcresp/cursor-flake/main";
     mcp-hub.url = "github:ravitemer/mcp-hub";
     mcp-servers-nix.url = "github:natsukium/mcp-servers-nix";
+    claude-desktop = {
+      url = "github:k3d3/claude-desktop-linux-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, rust-overlay, nix-gaming, ... }@inputs:

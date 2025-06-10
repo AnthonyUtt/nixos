@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   imports = [
+    ./ai-tooling.nix
     ./chromium.nix
-    ./cursor-ide
     ./cursors.nix
     ./discord
     ./firefox
@@ -32,11 +32,7 @@
     libation
     # cozy
     vlc
-    windsurf
     standardnotes
-
-    aider-chat
-    codex
   ];
 
   # services.opensnitch-ui.enable = true;

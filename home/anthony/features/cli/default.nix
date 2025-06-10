@@ -5,7 +5,7 @@
     ./git.nix
     ./misc-tools.nix
     ./ssh.nix
-    # ./superfile
+    ./superfile
     ./zellij
     ./zsh
   ];

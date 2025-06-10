@@ -35,7 +35,7 @@ in {
     enable = true;
     package = inputs.hyprland.packages.${system}.hyprland;
     plugins = with inputs.hyprland-plugins.packages.${system}; [
-      xtra-dispatchers
+      # xtra-dispatchers
     ];
     extraConfig = let
       theme = import ../../../theme;
