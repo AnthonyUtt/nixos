@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   imports = [
-    ./ai-tooling.nix
+    ./ai-tooling
     ./chromium.nix
     ./cursors.nix
     ./discord

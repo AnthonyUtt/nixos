@@ -6,17 +6,19 @@ in
     enable = true;
     autosuggestion.enable = true;
     enableCompletion = true;
+    completionInit = "autoload -U compinit && compinit -i";
     syntaxHighlighting.enable = true;
     historySubstringSearch.enable = true;
     history.ignoreAllDups = true;
-    # initExtraFirst = ''
-    #   (cat ~/.cache/wallust/sequences &)
-    # '';
     initContent = ''
       ${lib.strings.fileContents ./env.zsh}
       ${lib.strings.fileContents ./aliases.zsh}
-      ${if isWorkstation then lib.strings.fileContents ./init.zsh else ""}
+      ${lib.strings.fileContents ./init.zsh}
     '';
+
+    localVariables = {
+      ZSH_DISABLE_COMPFIX = true;
+    };
 
     oh-my-zsh = {
       enable = true;

@@ -2,6 +2,7 @@
   programs.alacritty = {
     enable = true;
     package = pkgs.alacritty;
+    theme = "everforest_light";
     settings = {
       window = {
         dimensions = {

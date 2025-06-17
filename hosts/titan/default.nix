@@ -1,4 +1,4 @@
-{ pkgs, inputs, outputs, unstable, ... }: {
+{ pkgs, inputs, outputs, unstable, config, ... }: {
   imports = [
     inputs.home-manager.nixosModules.home-manager
 
@@ -11,6 +11,7 @@
     ../common/optional/pipewire.nix
     ../common/optional/logitech.nix
     ../common/optional/docker.nix
+    ../common/optional/distrobox.nix
     ../common/optional/greetd.nix
     ../common/optional/quiet-boot.nix
     ../common/optional/flatpak.nix
@@ -78,7 +79,10 @@
   security.polkit.enable = true;
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs unstable; };
+    extraSpecialArgs = {
+      inherit inputs unstable;
+      inherit (config.sops) secrets;
+    };
     users = {
       anthony = import ../../home/anthony/titan.nix;
     };

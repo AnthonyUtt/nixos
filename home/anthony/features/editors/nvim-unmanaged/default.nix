@@ -1,58 +1,11 @@
-{ pkgs, inputs, config, ... }: 
+{ pkgs, inputs, config, secrets, ... }: 
 let
   rubyDeps = pkgs.ruby_3_1.withPackages (p: with p; [
     solargraph
   ]);
 
-  mcpServersConfig = inputs.mcp-servers-nix.lib.mkConfig pkgs {
-    programs = {
-      brave-search = {
-        enable = true;
-        passwordCommand = {
-          BRAVE_API_KEY = ["cat" "/run/secrets/brave_search_api_key"];
-        };
-      };
-      fetch.enable = true;
-      memory = {
-        enable = true;
-        env = {
-          MEMORY_FILE_PATH = "${config.home.homeDirectory}/.mcp/memory.json";
-        };
-      };
-      sequential-thinking.enable = true;
-      time.enable = true;
-    };
-
-    settings.servers = {
-      desktop-commander = {
-        command = "${pkgs.lib.getExe' pkgs.nodejs "npx"}";
-        args = [
-          "-y"
-          "@wonderwhy-er/desktop-commander"
-        ];
-      };
-      vikunja = {
-        command = "${pkgs.lib.getExe' pkgs.nodejs "npx"}";
-        args = [
-          "-y"
-          "vikunja-mcp"
-        ];
-        env = {
-          VIKUNJA_API_BASE = "https://todo.uttho.me";
-          VIKUNJA_API_TOKEN = ["cat" "/run/secrets/vikunja_api_token"];
-        };
-      };
-      linear = {
-        command = "${pkgs.lib.getExe' pkgs.nodejs "npx"}";
-        args = [
-          "-y"
-          "mcp-server-linear"
-        ];
-        env = {
-          LINEAR_ACCESS_TOKEN = ["cat" "/run/secrets/linear_access_token"];
-        };
-      };
-    };
+  mcpServersConfig = import ../../desktop/common/ai-tooling/mcp-servers.nix {
+    inherit pkgs inputs config secrets;
   };
 in {
   programs.neovim = {
