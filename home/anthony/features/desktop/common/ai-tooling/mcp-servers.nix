@@ -7,7 +7,7 @@ inputs.mcp-servers-nix.lib.mkConfig pkgs {
         BRAVE_API_KEY = ["cat" "${secrets.brave_search_api_key.path}"];
       };
     };
-    fetch.enable = true;
+    # fetch.enable = true;
     memory = {
       enable = true;
       env = {

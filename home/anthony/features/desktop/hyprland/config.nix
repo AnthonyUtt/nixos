@@ -101,9 +101,9 @@ in
     workspace_swipe = true
   }
 
-  render {
-    explicit_sync = 0
-  }
+  # render {
+  #   explicit_sync = 0
+  # }
 
   # Startup
   exec-once=mako

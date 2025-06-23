@@ -2,6 +2,7 @@
   programs.zellij = {
     enable = true;
     enableZshIntegration = true;
+    attachExistingSession = true;
     settings = {
       show_startup_tips = false;
       ui = {
