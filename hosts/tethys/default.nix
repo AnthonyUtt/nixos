@@ -1,4 +1,4 @@
-{ pkgs, inputs, outputs, unstable, ... }: {
+{ pkgs, inputs, outputs, unstable, config, ... }: {
   imports = [
     inputs.hardware.nixosModules.lenovo-thinkpad-x1-9th-gen
     inputs.home-manager.nixosModules.home-manager
@@ -68,7 +68,10 @@
 
   home-manager = {
     backupFileExtension = "bak";
-    extraSpecialArgs = { inherit inputs unstable; };
+    extraSpecialArgs = {
+      inherit inputs unstable;
+      inherit (config.sops) secrets;
+    };
     users = {
       anthony = import ../../home/anthony/tethys.nix;
     };
