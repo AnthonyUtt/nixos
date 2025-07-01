@@ -13,6 +13,10 @@
         mode = "0440";
         group = "keys";
       };
+      gemini_api_key = {
+        mode = "0440";
+        group = "keys";
+      };
       brave_search_api_key = {
         mode = "0440";
         group = "keys";

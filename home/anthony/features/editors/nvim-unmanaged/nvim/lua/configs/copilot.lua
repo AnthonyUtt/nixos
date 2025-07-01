@@ -1,6 +1,6 @@
 local opts = {
   panel = {
-    enabled = true,
+    enabled = false,
     auto_refresh = true,
     keymap = {
       jump_prev = "[[",

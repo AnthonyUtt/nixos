@@ -243,12 +243,26 @@ return {
   },
   {
     -- Other
-    "Glench/Vim-Jinja2-Syntax",
-    init = function()
-      vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
-        pattern = { "*.tera", "*.njk" },
-        command = "set ft=jinja",
-      })
-    end,
+    {
+      "Glench/Vim-Jinja2-Syntax",
+      init = function()
+        vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+          pattern = { "*.tera", "*.njk" },
+          command = "set ft=jinja",
+        })
+      end,
+    },
+    {
+      "tpope/vim-rails",
+      config = function()
+        -- disable autocmd set filetype=eruby.yaml
+        vim.api.nvim_create_autocmd({ "BufNewFile", "BufReadPost" }, {
+          pattern = { "*.yml" },
+          callback = function()
+            vim.bo.filetype = "yaml"
+          end,
+        })
+      end,
+    },
   },
 }

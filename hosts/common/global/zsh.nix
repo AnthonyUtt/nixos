@@ -15,6 +15,7 @@ in
       # Secrets
       export OPENAI_API_KEY=$(cat ${config.sops.secrets.openai_api_key.path})
       export ANTHROPIC_API_KEY=$(cat ${config.sops.secrets.anthropic_api_key.path})
+      export GEMINI_API_KEY=$(cat ${config.sops.secrets.gemini_api_key.path})
       export BRAVE_API_KEY=$(cat ${config.sops.secrets.brave_search_api_key.path})
       export VIKUNJA_API_TOKEN=$(cat ${config.sops.secrets.vikunja_api_token.path})
       export LINEAR_ACCESS_TOKEN=$(cat ${config.sops.secrets.linear_access_token.path})
