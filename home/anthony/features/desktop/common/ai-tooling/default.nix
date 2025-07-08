@@ -7,6 +7,7 @@
   home.packages = with pkgs; [
     aider-chat
     claude-code
+    # chatgpt
     codex
     windsurf
   ];

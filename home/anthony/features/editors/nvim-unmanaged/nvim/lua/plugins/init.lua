@@ -75,7 +75,7 @@ return {
       "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
       "ibhagwan/fzf-lua", -- for file_selector provider fzf
       "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-      "zbirenbaum/copilot.lua", -- for copilot provider
+      -- "zbirenbaum/copilot.lua", -- for copilot provider
       "ravitemer/mcphub.nvim",
       {
         -- support for image pasting
@@ -130,12 +130,12 @@ return {
   "AnthonyUtt/lspcontainers.nvim",
   "ethanholz/nvim-lastplace",
   "onsails/lspkind.nvim",
-  {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
-    opts = require "configs.copilot",
-  },
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   cmd = "Copilot",
+  --   event = "InsertEnter",
+  --   opts = require "configs.copilot",
+  -- },
   {
     "michaelrommel/nvim-silicon",
     lazy = true,
